@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+        border: none;
+        box-sizing: border-box;
+        text-decoration: none;
+        list-style-type: none;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 60vh;
+    }
+
+    body {
+        background-image: url(imagem/background.png);
+        background-size: cover;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 24px;
+    }
+
+    header {
+        background-image: url(imagem/bordacima.png);
+        background-size: cover;
+        background-position: top;
+        height: 50px;
+        width: 100%;
+        margin: 0px;
+    }
+
+
+    h1 {
+        font-size: 60px;
+        margin-top: 20px;
+    }
+
+    article {
+        background-color: #DDD;
+        width: 50%;
+        height: 300px;
+        margin-top: 3%;
+        margin-left: 25%;
+        border-radius: 15px;
+    }
+
+    .botao {
+        display: block;
+        background-color: #4e1eec;
+        width: 50%;
+        height: 60px;
+        margin-top: 30px;
+        margin-bottom: 20px;
+        border-radius: 15px;
+    }
+
+    .botao > a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        color: white;
+        text-decoration: none;
+    }
+    </style>
+    <title>AdminTec</title>
+</head>
+<body>
+    <table>
+        <header>
+        </header>
+        <h1 align="center">ADMINTEC</h1>
+            <article class="container">
+                <section class="botao"><a href="registro.html">Cadastrar-se</a></section>
+                <section class="botao"><a href="login.html">Entrar</a></section>
+            </article>
+    </table>
+</body>
+</html>

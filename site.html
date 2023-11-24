@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="estilo.css" media="screen" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            border: none;
+            box-sizing: border-box;
+            text-decoration: none;
+            list-style-type: none;
+        }
+
+        body {
+            background-image: url(imagem/background.png);
+            background-size: cover;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 18px;
+            margin: 0;
+        }
+
+        header {
+            background-image: url(imagem/bordacima.png);
+            background-size: cover;
+            background-position: top;
+            height: 50px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            color: white;
+            position: relative;
+        }
+        section {
+        background-color: #DDD;
+        width: 50%;
+        height: 300px;
+        margin-top: 3%;
+        margin-left: 25%;
+        border-radius: 15px
+    }
+        .admintecanto {
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+        }
+
+        .admintecanto h2 {
+            margin-right: 10px;
+            color: white;
+        }
+
+        .admintecanto img {
+            cursor: pointer;
+        }
+
+        .produtos-container {
+            width: 80%; /* Ajuste a largura conforme necessário */
+            margin: 20px auto; /* Centraliza a div e adiciona espaço ao redor */
+        }
+
+        .produtos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .produto {
+            width: 22%;
+            margin: 1%;
+            position: relative;
+        }
+
+        .produto img {
+            width: 50%;
+            border-radius: 5px;
+            margin-bottom: 50px;
+        }
+
+        .info-produto {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px;
+            background-color: #fff;
+            border-radius: 0 0 5px 5px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+        .catalogo {
+            display: none;
+            position: absolute;
+            top: 50px; /* Posiciona abaixo do header */
+            right: 0;
+            background-color: #f9f9f9;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .catalogo a {
+            color: black;
+            padding: 12px 16px;
+            display: block;
+            text-decoration: none;
+        }
+        .preco {
+            font-weight: bold;
+        }
+
+        .selecionado {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .finalizar-compra {
+            background-color: #3498db;
+            color: white;
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .carrinho {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        .carrinho img {
+            width: 30px;
+            margin-bottom: 5px;
+        }
+
+        .quantia-dinheiro {
+            font-weight: bold;
+        }
+    </style>
+    <title>Site</title>
+</head>
+<body>
+    <header>
+        <div class="admintecanto">
+            <h2>ADMINTEC</h2>
+            <details>
+                <summary> <img src="imagem/tresbarranormal.png" onclick="toggleCatalogo()" height="40" width="40"></summary>
+                <!-- Conteúdo do catálogo -->
+                <div class="catalogo">
+                    <a href="#">Item 1</a>
+                    <a href="#">Item 2</a>
+                    <a href="#">Item 3</a>
+                </div>
+            </details>
+        </div>
+    </header>
+<div class="carrinho">
+        <img src="imagem/carrinhodecompra.png" alt="Carrinho de Compras">
+        <span class="quantia-dinheiro">R$ 100,00</span>
+    </div>
+     <div class="produtos-container">
+        <section class="produtos">
+        <!-- Produto 1 -->
+        <div class="produto">
+            <img src="imagem/produtoteste.png" alt="Produto Teste">
+            <div class="info-produto">
+                <span class="preco">R$ 19,99</span>
+                <button class="finalizar-compra" onclick="finalizarCompra(this)">Comprar</button>
+            </div>
+        </div>
+         <!-- Produto 2 -->
+         <div class="produto">
+            <img src="imagem/produtoteste.png" alt="Produto Teste">
+            <div class="info-produto">
+                <span class="preco">R$ 19,99</span>
+                <button class="finalizar-compra" onclick="finalizarCompra(this)">Comprar</button>
+            </div>
+        </div>
+         <!-- Produto 3 -->
+         <div class="produto">
+            <img src="imagem/produtoteste.png" alt="Produto Teste">
+            <div class="info-produto">
+                <span class="preco">R$ 19,99</span>
+                <button class="finalizar-compra" onclick="finalizarCompra(this)">Comprar</button>
+            </div>
+        </div>
+         <!-- Produto 4 -->
+         <div class="produto">
+            <img src="imagem/produtoteste.png" alt="Produto Teste">
+            <div class="info-produto">
+                <span class="preco">R$ 19,99</span>
+                <button class="finalizar-compra" onclick="finalizarCompra(this)">Comprar</button>
+            </div>
+        </div>
+         <!-- Produto 5 -->
+         <div class="produto">
+            <img src="imagem/produtoteste.png" alt="Produto Teste">
+            <div class="info-produto">
+                <span class="preco">R$ 19,99</span>
+                <button class="finalizar-compra" onclick="finalizarCompra(this)">Comprar</button>
+            </div>
+        </div>
+         <!-- Produto 6 -->
+         <div class="produto">
+            <img src="imagem/produtoteste.png" alt="Produto Teste">
+            <div class="info-produto">
+                <span class="preco">R$ 19,99</span>
+                <button class="finalizar-compra" onclick="finalizarCompra(this)">Comprar</button>
+            </div>
+        </div>
+         <!-- Produto 7 -->
+         <div class="produto">
+            <img src="imagem/produtoteste.png" alt="Produto Teste">
+            <div class="info-produto">
+                <span class="preco">R$ 19,99</span>
+                <button class="finalizar-compra" onclick="finalizarCompra(this)">Comprar</button>
+            </div>
+        </div>
+         <!-- Produto 8 -->
+         <div class="produto">
+            <img src="imagem/produtoteste.png" alt="Produto Teste">
+            <div class="info-produto">
+                <span class="preco">R$ 19,99</span>
+                <button class="finalizar-compra" onclick="finalizarCompra(this)">Comprar</button>
+            </div>
+        </div>
+        <!-- Repita para outros produtos... -->
+
+    </section>
+</div>    
+
+    <script>
+        function finalizarCompra(button) {
+            button.classList.toggle('selecionado');
+            // Lógica adicional para finalizar a compra...
+        }
+
+        function toggleCatalogo() {
+            var catalogo = document.querySelector('.catalogo');
+            catalogo.style.display = (catalogo.style.display === 'block') ? 'none' : 'block';
+        }
+    </script>
+</body>
+</html>

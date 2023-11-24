@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="estilo.css" media="screen" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            border: none;
+            box-sizing: border-box;
+            text-decoration: none;
+            list-style-type: none;
+        }
+    
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            justify-content: center;
+            height: 30vh;
+        }
+    
+        body {
+            background-image: url(imagem/background.png);
+            background-size: cover;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 18px;
+        }
+    
+        header {
+            background-image: url(imagem/bordacima.png);
+            background-size: cover;
+            background-position: top;
+            height: 50px;
+            width: 100%;
+            margin: 0px;
+        }
+    
+    
+        h1 {
+            font-size: 60px;
+            margin-top: 20px;
+        }
+
+        article {
+            background-color: #DDD;
+            width: 50%;
+            height: 300px;
+            margin-top: 3%;
+            margin-left: 25%;
+            border-radius: 15px;
+        }
+        .form-group {
+            margin-top: 3%;
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .conta {
+            padding-top: 5px;
+            padding-left: 27%;
+        }
+        
+        .espaco {
+            padding-left: 33px;
+        }
+        .back-button {
+            background-color: #4e1eec;
+            color: #FFF;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .admintecanto {
+            text-align: right;
+            padding-top: 10px;
+            color: white;
+        }
+    </style>
+    <title>Site</title>
+</head>
+
+<body>
+    <table>
+        <header>
+            <h2 class="admintecanto">ADMINTEC</h2>
+        </header>
+            <article class="container">
+                <h3 class="form-group">Insira seu endereço de e-mail para recuperar a senha:</h3>
+  <form>
+    <div class="form-group">
+      <label for="email">E-mail:</label>
+      <input type="email" id="mail" name="mail" placeholder="Digite seu endereço de e-mail" required>
+    </div>
+    <div class="form-group">
+      <button class="back-button" type="submit">Recuperar Senha</button>
+      <button class="back-button" onclick="goToLoginPage()">Voltar para Login</button>
+    </div>
+  </form>
+            </article>
+                <div class="conta">
+                    <a href="registro.html"> Ainda não tenho uma Conta </a> 
+                    <br/>
+                    <a href="index.html"> Voltar para o Início</a>
+                  </form>
+            </div>
+    </table>
+</body>
+</html>
